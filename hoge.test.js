@@ -1,5 +1,5 @@
 //import
-const {Hoge} = require("./main.js")
+import {Hoge} from "./main.js"
 
 test("constructor", () => {
 	var a = 2;
