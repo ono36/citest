@@ -1,6 +1,6 @@
 //import
 "use strict"
-import {Hoge} from "./main.js"
+const Hoge  = require('main.js')
 
 test("constructor", () => {
 	var a = 2;
