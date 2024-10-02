@@ -1,5 +1,5 @@
 export default class Hoge{
-	constructor{
+	constructor(){
 		this.a = 1;
 
 	}
