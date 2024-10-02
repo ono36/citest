@@ -1,4 +1,5 @@
 //import
+"use strict"
 import {Hoge} from "./main.js"
 
 test("constructor", () => {
