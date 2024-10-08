@@ -1,8 +1,8 @@
 module.exports = {
-entry: "./src/index.js",
+entry: "./src/watcher.js",
 output:{
 path:  __dirname + "/docs"
-,filename:  	"index.js",
+,filename:  	"watcher.js",
 },
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
