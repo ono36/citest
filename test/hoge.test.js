@@ -80,7 +80,7 @@ test("子監視(孫変更)", () => {
 
 	watcher.watch(test,"child",fnc);
 
-	test.child.member = 2; //監視変数の値を変更
+	test.child.member = 2; //監視変数の値を変更する
 
 	watcher.refresh();
 
