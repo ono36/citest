@@ -3,6 +3,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
   # Runs on pushes targeting the default branch
+  # 実行対象ブランチ/パス
   push:
     branches: ["main"]
     paths:
