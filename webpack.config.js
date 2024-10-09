@@ -1,7 +1,7 @@
 module.exports = {
 entry: "./src/watcher.js",
 output:{
-path:  __dirname + "/docs"
+path:  __dirname + "/build"
 ,filename:  	"watcher.js",
 },
   // モード値を production に設定すると最適化された状態で、
@@ -16,7 +16,7 @@ path:  __dirname + "/docs"
 	port:8081,
 	host: '0.0.0.0'
 	,static: {
-directory: "docs",
+        directory: "build",
 	}
   },
   module: {
