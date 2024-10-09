@@ -26,31 +26,57 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  # Test job
+  test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Unit test
+        run: |
+          npm install
+          npm test
+
+  # Build job
+  build:
+#ubuntuを使用
+    runs-on: ubuntu-latest
+    steps:
+# リポジトリをチェックアウト
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+# プッシュ権限のためトークンを設定
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Unit test
+
+# ビルド
+      - name: Build
         run: |
           npm install
-      - name: Build
-        run: npm run build
+          npm run build
+
+# ビルド結果をgithub-pageにアップロード
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
+
+# ビルド結果をリポジトリにコミットしプッシュ
       - name: push generated buildfile
         run: |
           git config user.name auto-push
           git config user.email auto-push@example.com
-          git add docs/*
+          git add build/*
           git commit -m "auto push from ci" || echo no commits
           git push
 
