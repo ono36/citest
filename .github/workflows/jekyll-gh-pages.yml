@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
@@ -41,14 +41,10 @@ jobs:
           npm install
       - name: Build
         run: npm run build
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./docs
-          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
+        with:
+          path: docs
       - name: push generated buildfile
         run: |
           git config user.name auto-push
