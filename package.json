@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack ",
     "start": "webpack serve",
-    "test": "jest"
+    "test": "jest",
+    "doc": "jsdoc -r src -d build/jsdoc/"
   },
   "author": "",
   "devDependencies": {
@@ -17,6 +18,7 @@
     "babel-loader": "^8.2.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jsdoc": "^4.0.3",
     "webpack": "^5.35.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^4.15.1"
