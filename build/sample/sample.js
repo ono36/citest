@@ -1,4 +1,4 @@
-import Binder from "../build/binder.js"
+import Binder from "../binder.js"
 
 export default Sample{
 	constructor(){
