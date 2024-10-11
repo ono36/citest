@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="../build/binder.js" ></script>
+  <script type="text/javascript">
+  var root={"count":0}; //変数を宣言
+
+  //起動時に実行される関数
+  function load(){
+	  //バインドクラス
+	  var binder = new Binder();
+
+	  //バインドクラスの初期設定
+	  // 第1引数 バインドするコントロール
+	  // 第2引数 バインドする変数
+	   binder.init(document.body,root);
+  }
+
+  //ボタンを押したときに実行される関数
+  function increment(){
+      //inputboxにバインドされている変数をインクリメント
+	  root.count++;
+  }
+  </script>
+</head>
+<body onload="load()">
+test
+<input type="text" :bind="count" ></input>
+<button onclick="increment()">インクリメント</button>
+<br>
+<br>
+<br>
+<textarea  rows="40" cols="80" >
+<html>
+<head>
+  <script type="text/javascript" src="../build/binder.js" ></script>
+  <script type="text/javascript">
+
+  var root={"count":0}; //変数を宣言
+
+  //起動時に実行される関数
+  function load(){
+	  //バインドクラス
+	  var binder = new Binder();
+
+	  //バインドクラスの初期設定
+	  // 第1引数 バインドするコントロール
+	  // 第2引数 バインドする変数
+	   binder.init(document.body,root);
+  }
+
+  //ボタンを押したときに実行される関数
+  function increment(){
+      //inputboxにバインドされている変数をインクリメント
+	  root.count++;
+  }
+  </script>
+</head>
+<body onload="load()">
+test
+<input type="text" :bind="count" ></input>
+<button onclick="increment()">インクリメント</button>
+</body>
+</html>
+</textarea>
+
+</body>
+</html>

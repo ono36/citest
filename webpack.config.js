@@ -1,8 +1,8 @@
 module.exports = {
-entry: "./src/watcher.js",
+entry: "./src/binder.js",
 output:{
 path:  __dirname + "/build"
-,filename:  	"watcher.js",
+,filename:  	"binder.js",
 },
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
@@ -48,6 +48,6 @@ path:  __dirname + "/build"
       },
     ],
   },
-  // ES5(IE11等)向けの指定
+  // ES5(n)向けの指定
   target: ["web", "es5"],
 };
