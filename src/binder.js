@@ -28,7 +28,7 @@ class Binder {
 		if(variable_root){
 			this.variable_root = variable_root;
 		}
-		this.bindNodes(dom,this.variable_root);
+		this.bindNodes(element,this.variable_root);
 
 		this.watcher.init();
 
